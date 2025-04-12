@@ -41,7 +41,7 @@ Ensure you have:
 1.  **Clone the Repository**:
 
     ```
-    git clone https://github.com/yourusername/SQL-Sales-Analysis.git
+    git clone https://github.com/rakeshjoshi4/SQL-Sales-Analysis
     ```
 
 2.  **Open SQL Scripts**:
