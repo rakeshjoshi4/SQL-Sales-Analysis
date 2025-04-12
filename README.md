@@ -114,7 +114,7 @@ Ensure you have:
 
     ```sql
     WITH yearly_product_sales AS(
-    	SELECT YEAR(f.order_date) AS order_year, p.product_name, SUM(f.sales_amount) AS current_sales
+    	SELECT YEAR(f.order_date) AS order_year, p.product_name, SUM(f.sales_amount) AS current_sales  
 	FROM gold.fact_sales f
 	LEFT JOIN gold.dim_products p ON p.product_key = f.product_key
 	WHERE f.order_date IS NOT NULL
