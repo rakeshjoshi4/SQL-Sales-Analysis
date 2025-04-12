@@ -122,7 +122,7 @@ Ensure you have:
     )
     
 	    SELECT
-	    	order_year,
+    		order_year,
     		product_name,
     		current_sales,
     		AVG(current_sales) OVER (PARTITION BY product_name) AS avg_sales,
@@ -198,7 +198,7 @@ Ensure you have:
     /*---------------------------------------------------------------------------
     2) Customer Aggregations: Summarizes key metrics at the customer level
     ---------------------------------------------------------------------------*/
-    SELECT 
+    SELECT
     	customer_key,
     	customer_number,
     	customer_name,
@@ -272,8 +272,8 @@ Ensure you have:
     ---------------------------------------------------------------------------*/
 	SELECT
     	    f.order_number,
-	    f.order_date,
-	    f.customer_key,
+    	    f.order_date,
+    	    f.customer_key,
 	    f.sales_amount,
 	    f.quantity,
 	    p.product_key,
@@ -291,10 +291,10 @@ Ensure you have:
     ---------------------------------------------------------------------------*/
 	SELECT
     	    product_key,
-	    product_name,
-	    category,
-	    subcategory,
-	    cost,
+    	    product_name,
+    	    category,
+    	    sub_category,
+    	    cost,
 	    DATEDIFF(MONTH, MIN(order_date), MAX(order_date)) AS lifespan,
 	    MAX(order_date) AS last_sale_date,
 	    COUNT(DISTINCT order_number) AS total_orders,
