@@ -145,7 +145,7 @@ Ensure you have:
 
 1.  **Identify category contributions to total sales**
 
- ```
+ ```sql
  WITH category_sales AS (
      SELECT p.category, SUM(f.sales_amount) AS total_sales
      FROM gold.fact_sales f
@@ -165,7 +165,7 @@ Ensure you have:
 
 1.  **Generate Customer Report**:
 
- ```
+ ```sql
  IF OBJECT_ID('gold.report_customers', 'V') IS NOT NULL
      DROP VIEW gold.report_customers;
  GO
@@ -251,7 +251,7 @@ Ensure you have:
 
 1.  **Generate Product Report**:
 
- ```
+ ```SQL
  IF OBJECT_ID('gold.report_products', 'V') IS NOT NULL
      DROP VIEW gold.report_products;
  GO
